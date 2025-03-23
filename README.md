@@ -71,7 +71,7 @@ curl -X GET http://localhost:3000/get/6nLmEMer
 ## Technologies Used
 - **Go Fiber** - Web framework
 - **PostgreSQL** - Database
-- **GORM** - ORM for Go
+
 
 ## License
 This project is licensed under the MIT License.
