@@ -33,8 +33,13 @@ CREATE DATABASE url_shortener;
 ```
 
 ### Run the Application
+## for mac/linux 
 ```sh
-go run main.go
+go run *.go
+```
+## for windows 
+```sh
+go run .
 ```
 
 ## API Endpoints
