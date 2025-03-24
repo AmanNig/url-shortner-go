@@ -29,12 +29,12 @@ func (s *ApiServer) Run(){
 
 }
 func(s *ApiServer) Handledefault(c *fiber.Ctx) error {
-	return c.JSON(fiber.Map{"message":"hello world"})
+	return c.JSON("GIVA is a fine jewellery brand of silver, gold and lab grown diamonds. We have grown to be the largest D2C jewellery brand in India that has gained people’s trust as a go-to choice for gifting. GIVA's journey shines even brighter! GIVA strives to bridge the gap between online ease and in-store delight with its omnichannel experience")
 }
 func(s *ApiServer) HandleURLShort(c *fiber.Ctx) error{
 	req:=ShortUrlReq{}
 	if err:= c.BodyParser(&req); err != nil{
-        return c.Status(http.StatusBadRequest).JSON("GIVA is a fine jewellery brand of silver, gold and lab grown diamonds. We have grown to be the largest D2C jewellery brand in India that has gained people’s trust as a go-to choice for gifting. GIVA's journey shines even brighter! GIVA strives to bridge the gap between online ease and in-store delight with its omnichannel experience")
+        return c.Status(http.StatusBadRequest).JSON(fiber.Map{"error": "Invalid request"})
 	}
 	if req.LongURL==""{
 		return c.Status(http.StatusBadRequest).JSON(fiber.Map{"error": "Long URL required"})
